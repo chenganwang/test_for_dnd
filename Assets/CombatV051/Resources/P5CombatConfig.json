@@ -1,0 +1,71 @@
+{
+  "version": "p5.1",
+  "opportunitySeconds": 8.0,
+  "readyStartSeconds": 2.0,
+  "prepareSeconds": 0.8,
+  "prepareCooldown": 6.0,
+  "braceSeconds": 2.0,
+  "braceMoveMultiplier": 0.6,
+  "flankAuthorizationSeconds": 4.0,
+  "frostSeconds": 4.0,
+  "frostMoveMultiplier": 0.7,
+  "shoveDistance": 2.0,
+  "thunderDistance": 2.0,
+  "followupDistance": 0.8,
+  "retreatDistance": 1.5,
+  "comboMomentum": 30.0,
+  "comboFocus": 0.75,
+  "followupMomentum": 10.0,
+  "breakWindowSeconds": 3.0,
+  "breakRecoverySeconds": 5.0,
+  "ordinaryStabilityDc": 12,
+  "eliteStabilityDc": 14,
+  "bossStabilityDc": 16,
+  "shoveCooldown": 4.0,
+  "sneakCooldown": 5.0,
+  "thunderCooldown": 5.0,
+  "thunderAngle": 90.0,
+  "impactMaximumUses": 2,
+  "impactMinimumDistance": 0.6,
+  "actions": [
+    {
+      "id": "shove",
+      "rollType": "Check",
+      "range": 2.5,
+      "windup": 0.25,
+      "ranged": false,
+      "damage": 0,
+      "shoveDistance": 2.0,
+      "breakDamage": 1.0
+    },
+    {
+      "id": "sneak",
+      "rollType": "Attack",
+      "range": 2.5,
+      "windup": 0.25,
+      "ranged": false,
+      "damage": 3,
+      "requiresFlanking": false
+    },
+    {
+      "id": "control",
+      "rollType": "Save",
+      "saveAbility": "Constitution",
+      "range": 3.0,
+      "windup": 0.4,
+      "ranged": false,
+      "damage": 0,
+      "spellCost": 1,
+      "shoveDistance": 2.0
+    }
+  ],
+  "bossPushMultiplier": 0.25,
+  "frontalShieldAcBonus": 2,
+  "frontalShieldTemplateIds": [
+    "guard"
+  ],
+  "braceEligibleTemplateIds": [
+    "guard",
+    "scout"
+  ]
+}

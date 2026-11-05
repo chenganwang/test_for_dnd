@@ -1,0 +1,16 @@
+{
+  "exploration": "Audio/Music/exploration",
+  "combat": "Audio/Music/combat",
+  "crossfadeSeconds": 2.0,
+  "focusDuck": 0.55,
+  "freezeDuck": 0.20,
+  "pauseDuck": 0.40,
+  "focusLowPass": 4200,
+  "freezeLowPass": 1600,
+  "normalLowPass": 22000,
+  "musicGain": 0.48,
+  "ambienceGain": 0.06,
+  "worldGain": 0.65,
+  "uiGain": 0.60,
+  "footstepDistance": 1.1
+}

@@ -1,0 +1,22 @@
+Action-CRPG V14 - Runtime asset credits
+
+Music: Dark Shrine Loop, by qubodup, based on Shrine by yd.
+Source: https://opengameart.org/content/dark-shrine-loop
+License: CC0 1.0. Modified for game playback: resampling, level conditioning,
+edge taper, and two repetitions of the original phrase.
+
+Music: Mild Action Track, by LushoGames.
+Source: https://opengameart.org/content/mild-action-track
+License: CC0 1.0. Modified for game playback: resampling, level conditioning,
+and edge taper.
+
+The supplied CC0-1.0-legalcode.html preserves the license text used for these
+two music assets. Dungeon Ambience and other evaluated music are not used.
+
+Character references and names are supplied by the project author. Character
+silhouettes are derived from those references; game geometry and sound effects
+are project-generated assets. No Windows system font files are redistributed.
+
+Unity package license texts and third-party notices are supplied in this
+Licenses directory, with their original package names and versions. These
+notices do not grant a new license to Unity itself or to author-owned assets.

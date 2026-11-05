@@ -1,0 +1,206 @@
+{
+  "focusScale": 0.1,
+  "rollAnimationSeconds": 0.6,
+  "majorRecovery": 1.2,
+  "bonusRecovery": 4,
+  "reactionRecovery": 8,
+  "basicRange": 2.6,
+  "basicDamage": 3,
+  "aimSeconds": 1,
+  "guardSeconds": 1.4,
+  "parrySeconds": 0.3,
+  "dodgeSeconds": 0.3,
+  "dodgeRecovery": 1.8,
+  "passiveMomentumPerSecond": 4,
+  "passiveEncounterCap": 0,
+  "totalEncounterMomentumCap": 0,
+  "basicHitInternalCooldown": 1,
+  "templateWindow": 4,
+  "basicHitMomentum": 1,
+  "perfectDodgeMomentum": 30,
+  "parryMomentum": 30,
+  "weakpointMomentum": 30,
+  "flankMomentum": 30,
+  "interruptMomentum": 40,
+  "environmentMomentum": 40,
+  "threatKillMomentum": 25,
+  "aimMomentum": 0,
+  "guardMomentum": 30,
+  "tacticalBudgetNormal": 100,
+  "tacticalBudgetElite": 150,
+  "tacticalBudgetBossPhase": 100,
+  "paidChainMomentumCap": 60,
+  "preparationSeconds": 1,
+  "preparationEffectSeconds": 4,
+  "preparationRepeatSeconds": 6,
+  "preparationRange": 8,
+  "basicContactSeconds": 0.12,
+  "orderArrivalDistance": 0.28,
+  "orderTimeoutSeconds": 12,
+  "lastLowThreatHealthFraction": 0.25,
+  "actions": [
+    {
+      "id": "attack",
+      "rollType": "Attack",
+      "range": 7,
+      "windup": 0.35,
+      "damage": 8,
+      "spellCost": 0,
+      "itemCost": 0,
+      "ranged": true
+    },
+    {
+      "id": "shove",
+      "rollType": "Save",
+      "range": 2.5,
+      "windup": 0.25,
+      "damage": 0,
+      "spellCost": 0,
+      "itemCost": 0,
+      "ranged": false,
+      "shoveDistance": 1.5,
+      "breakDamage": 1
+    }
+  ],
+  "partyEnemyHealth": 120,
+  "reactionOfferSeconds": 6,
+  "reactionDecisionSeconds": 6,
+  "parryRange": 3,
+  "maxPendingIncoming": 8,
+  "rogueBackstabDot": -0.5,
+  "actorTemplates": [
+    {
+      "formation": "Front",
+      "hp": 30,
+      "saveBonus": 3,
+      "constitutionModifier": 2,
+      "wisdomModifier": 1,
+      "superiority": 2,
+      "proficiency": 2,
+      "dexSaveBonus": 1,
+      "intelligenceModifier": 0,
+      "actionIds": [
+        "attack",
+        "shove"
+      ],
+      "strengthModifier": 3,
+      "wisSaveBonus": 1,
+      "charismaModifier": 0,
+      "role": "Fighter",
+      "dexterityModifier": 1,
+      "inspiration": 2,
+      "basic": {
+        "id": "basic-attack",
+        "ranged": false,
+        "damage": 3,
+        "range": 2.6
+      },
+      "attackBonus": 5,
+      "spellSlots": 0,
+      "items": 1,
+      "armorClass": 14
+    },
+    {
+      "formation": "Mid",
+      "hp": 24,
+      "saveBonus": 1,
+      "constitutionModifier": 1,
+      "wisdomModifier": 1,
+      "superiority": 0,
+      "proficiency": 2,
+      "dexSaveBonus": 5,
+      "intelligenceModifier": 1,
+      "actionIds": [
+        "sneak"
+      ],
+      "strengthModifier": 1,
+      "wisSaveBonus": 1,
+      "charismaModifier": 1,
+      "role": "Rogue",
+      "dexterityModifier": 3,
+      "inspiration": 2,
+      "basic": {
+        "id": "basic-attack",
+        "ranged": false,
+        "damage": 3,
+        "range": 2.3
+      },
+      "attackBonus": 5,
+      "spellSlots": 0,
+      "items": 1,
+      "armorClass": 15
+    },
+    {
+      "formation": "Back",
+      "hp": 22,
+      "saveBonus": 0,
+      "constitutionModifier": 1,
+      "wisdomModifier": 2,
+      "superiority": 0,
+      "proficiency": 2,
+      "dexSaveBonus": 1,
+      "intelligenceModifier": 3,
+      "actionIds": [
+        "control"
+      ],
+      "strengthModifier": 0,
+      "wisSaveBonus": 3,
+      "charismaModifier": 1,
+      "role": "Mage",
+      "dexterityModifier": 1,
+      "inspiration": 2,
+      "basic": {
+        "id": "cantrip",
+        "ranged": true,
+        "damage": 2,
+        "range": 7
+      },
+      "attackBonus": 5,
+      "spellSlots": 2,
+      "items": 1,
+      "armorClass": 12
+    }
+  ],
+  "partyActions": [
+    {
+      "id": "sneak",
+      "windup": 0.25,
+      "damage": 3,
+      "rollType": "Attack",
+      "range": 2.5,
+      "conditionalDamage": 4,
+      "ranged": false,
+      "requiresFlanking": true
+    },
+    {
+      "ranged": true,
+      "range": 7,
+      "windup": 0.4,
+      "rollType": "Save",
+      "saveAbility": "Wisdom",
+      "id": "control",
+      "damage": 0,
+      "effectId": "restrained",
+      "spellCost": 1,
+      "effectSeconds": 2.5
+    }
+  ],
+  "reactions": [
+    {
+      "id": "shield",
+      "shieldAcBonus": 5,
+      "requiresD20": false,
+      "shieldSeconds": 2,
+      "role": "Mage",
+      "spellCost": 1
+    },
+    {
+      "id": "parry",
+      "protectAllies": true,
+      "protectionReduction": 0.5,
+      "superiorityCost": 1,
+      "requiresD20": true,
+      "role": "Fighter"
+    }
+  ]
+}

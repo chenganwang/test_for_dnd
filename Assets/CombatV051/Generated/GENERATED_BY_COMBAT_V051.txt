@@ -1,0 +1,1 @@
+Combat v051 generated prototype assets. Preserve authored assets and all existing GUIDs.

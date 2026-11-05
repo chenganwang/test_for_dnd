@@ -1,0 +1,1 @@
+Owned P3 audio assets. Preserve existing GUIDs; no author assets may be overwritten.

@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><EnableDefaultCompileItems>false</EnableDefaultCompileItems><Nullable>disable</Nullable><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <ItemGroup><Compile Include="../../Assets/CombatV051/Domain/*.cs"/><Compile Include="Program.cs"/><Compile Include="CloneGenerator.cs"/><Compile Include="JsonWriterGenerator.cs"/><Compile Include="P5LegacyVerifier.cs"/><Compile Include="JsonFileVerifier.cs"/><PackageReference Include="Newtonsoft.Json" Version="13.0.3"/></ItemGroup>
+  <ItemGroup><Compile Include="V13ContentExporter.cs"/><Compile Include="V14ContentExporter.cs"/></ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+{
+  "name": "CombatV051.Editor",
+  "references": [
+    "CombatV051.Domain",
+    "CombatV051.Runtime",
+    "Unity.Newtonsoft.Json",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "Unity.RenderPipelines.Core.Runtime"
+  ],
+  "includePlatforms": ["Editor"]
+}

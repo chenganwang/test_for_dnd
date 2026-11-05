@@ -1,0 +1,7 @@
+{
+  "name": "CombatV051.Tests.PlayMode",
+  "references": ["CombatV051.Domain", "CombatV051.Runtime", "Unity.InputSystem", "Unity.ugui"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "autoReferenced": false
+}

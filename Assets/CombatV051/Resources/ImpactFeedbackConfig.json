@@ -1,0 +1,41 @@
+{
+  "levels": [
+    {
+      "stopSeconds": 0,
+      "shakeStrength": 0,
+      "shakeSeconds": 0,
+      "fxScale": 1,
+      "flinch": 0,
+      "audioGain": 0
+    },
+    {
+      "stopSeconds": 0,
+      "shakeStrength": 0,
+      "shakeSeconds": 0,
+      "fxScale": 1,
+      "flinch": 0.8,
+      "audioGain": 0.8
+    },
+    {
+      "stopSeconds": 0.045,
+      "shakeStrength": 0.035,
+      "shakeSeconds": 0.14,
+      "fxScale": 1.4,
+      "flinch": 1.3,
+      "audioGain": 1.05
+    },
+    {
+      "stopSeconds": 0.08,
+      "shakeStrength": 0.09,
+      "shakeSeconds": 0.19,
+      "fxScale": 2,
+      "flinch": 2,
+      "audioGain": 1.35
+    }
+  ],
+  "cooldownSeconds": 0.16,
+  "maximumStopPerSecond": 0.2,
+  "bossStopSeconds": 0.1,
+  "bossMonochromeSeconds": 0.16,
+  "bossShakeMultiplier": 1.3
+}

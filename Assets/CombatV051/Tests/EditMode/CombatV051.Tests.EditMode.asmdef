@@ -1,0 +1,1 @@
+{"name":"CombatV051.Tests.EditMode","rootNamespace":"CombatV051.Tests","references":["CombatV051.Domain"],"optionalUnityReferences":["TestAssemblies"],"includePlatforms":["Editor"],"overrideReferences":true,"precompiledReferences":["nunit.framework.dll","Newtonsoft.Json.dll"],"autoReferenced":false}

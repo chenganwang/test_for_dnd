@@ -1,0 +1,22 @@
+{
+  "moveSpeed": 4.2,
+  "dodgeSpeed": 10.0,
+  "dodgeDuration": 0.28,
+  "dodgeCooldown": 1.8,
+  "rollAnimationSeconds": 2.0,
+  "quickRollSeconds": 0.8,
+  "dualRollExtraSeconds": 0.0,
+  "quickDualRollExtraSeconds": 0.0,
+  "ultraRollSeconds": 0.3,
+  "ultraDualRollExtraSeconds": 0.0,
+  "yaw": 45.0,
+  "pitch": 55.0,
+  "orthographicSize": 10.0,
+  "focusZoom": 1.10,
+  "enemyMoveSpeed": 1.3,
+  "enemyTelegraphSeconds": 1.4,
+  "enemyRecoverySeconds": 2.2,
+  "fighterHealth": 30,
+  "enemyHealth": 36,
+  "enemyDamage": 3
+}

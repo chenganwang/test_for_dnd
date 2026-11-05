@@ -1,0 +1,485 @@
+{
+  "contentVersion": "dungeon-v051-p2-1",
+  "restHealFraction": 0.35,
+  "rooms": [
+    {
+      "id": "R0",
+      "encounterKind": null,
+      "x": 0.0,
+      "z": 0.0,
+      "width": 24.0,
+      "depth": 20.0,
+      "eventIds": [],
+      "enemies": []
+    },
+    {
+      "id": "R1",
+      "encounterKind": "Normal",
+      "x": 26.0,
+      "z": 0.0,
+      "width": 24.0,
+      "depth": 20.0,
+      "eventIds": [],
+      "enemies": [
+        {
+          "id": "guard",
+          "templateId": "guard",
+          "x": 29.0,
+          "z": 1.0,
+          "bossMechanism": false
+        },
+        {
+          "id": "scout",
+          "templateId": "scout",
+          "x": 33,
+          "z": -3,
+          "bossMechanism": false
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "encounterKind": null,
+      "x": 52.0,
+      "z": 0.0,
+      "width": 24.0,
+      "depth": 20.0,
+      "eventIds": [
+        "EVENT_A"
+      ],
+      "enemies": []
+    },
+    {
+      "id": "R3",
+      "encounterKind": "Normal",
+      "x": 78.0,
+      "z": 0.0,
+      "width": 24.0,
+      "depth": 20.0,
+      "eventIds": [
+        "EVENT_B"
+      ],
+      "enemies": [
+        {
+          "id": "guard",
+          "templateId": "guard",
+          "x": 80.0,
+          "z": 2.0,
+          "bossMechanism": false
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "encounterKind": "Normal",
+      "x": 52.0,
+      "z": 22.0,
+      "width": 24.0,
+      "depth": 20.0,
+      "eventIds": [],
+      "enemies": [
+        {
+          "id": "guard",
+          "templateId": "guard",
+          "x": 55.0,
+          "z": 21.0,
+          "bossMechanism": false
+        },
+        {
+          "id": "scout",
+          "templateId": "scout",
+          "x": 49.0,
+          "z": 25.0,
+          "bossMechanism": false
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "encounterKind": "Elite",
+      "x": 26.0,
+      "z": 22.0,
+      "width": 24.0,
+      "depth": 20.0,
+      "eventIds": [],
+      "enemies": [
+        {
+          "id": "elite",
+          "templateId": "elite",
+          "x": 29.0,
+          "z": 23.0,
+          "bossMechanism": false
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "encounterKind": null,
+      "x": 0.0,
+      "z": 22.0,
+      "width": 24.0,
+      "depth": 20.0,
+      "eventIds": [],
+      "enemies": []
+    },
+    {
+      "id": "R7",
+      "encounterKind": "Boss",
+      "x": -26.0,
+      "z": 22.0,
+      "width": 24.0,
+      "depth": 20.0,
+      "eventIds": [],
+      "enemies": [
+        {
+          "id": "boss",
+          "templateId": "boss",
+          "x": -29.0,
+          "z": 24.0,
+          "bossMechanism": false
+        },
+        {
+          "id": "mechanism",
+          "templateId": "mechanism",
+          "x": -32.0,
+          "z": 18.0,
+          "bossMechanism": true
+        }
+      ]
+    }
+  ],
+  "passages": [
+    {
+      "id": "P01",
+      "roomA": "R0",
+      "roomB": "R1",
+      "x": 13.0,
+      "z": 0.0,
+      "width": 6.0
+    },
+    {
+      "id": "P12",
+      "roomA": "R1",
+      "roomB": "R2",
+      "x": 39.0,
+      "z": 0.0,
+      "width": 6.0
+    },
+    {
+      "id": "P23",
+      "roomA": "R2",
+      "roomB": "R3",
+      "x": 65.0,
+      "z": 0.0,
+      "width": 6.0
+    },
+    {
+      "id": "P24_SMASH",
+      "roomA": "R2",
+      "roomB": "R4",
+      "x": 48.0,
+      "z": 11.0,
+      "width": 4.0
+    },
+    {
+      "id": "P24_OUTER",
+      "roomA": "R2",
+      "roomB": "R4",
+      "x": 56.0,
+      "z": 11.0,
+      "width": 4.0
+    },
+    {
+      "id": "P45",
+      "roomA": "R4",
+      "roomB": "R5",
+      "x": 39.0,
+      "z": 22.0,
+      "width": 6.0
+    },
+    {
+      "id": "P56",
+      "roomA": "R5",
+      "roomB": "R6",
+      "x": 13.0,
+      "z": 22.0,
+      "width": 6.0
+    },
+    {
+      "id": "P67",
+      "roomA": "R6",
+      "roomB": "R7",
+      "x": -13.0,
+      "z": 22.0,
+      "width": 6.0
+    },
+    {
+      "id": "P60_SHORTCUT",
+      "roomA": "R6",
+      "roomB": "R0",
+      "x": 0.0,
+      "z": 11.0,
+      "width": 6.0
+    }
+  ],
+  "enemies": [
+    {
+      "id": "guard",
+      "hp": 45,
+      "armorClass": 13,
+      "attackBonus": 3,
+      "saveBonus": 2,
+      "dexSaveBonus": 2,
+      "wisSaveBonus": 1,
+      "breakMaximum": 3.0,
+      "speed": 2.0,
+      "patterns": [
+        {
+          "id": "strike",
+          "shape": "Cone",
+          "windup": 1.1,
+          "recovery": 1.1,
+          "size": 3.5,
+          "radius": 2.2,
+          "angle": 65.0,
+          "phaseThreshold": 1.0,
+          "damage": 3,
+          "dc": 12,
+          "savingThrow": false,
+          "parryable": true
+        }
+      ]
+    },
+    {
+      "id": "scout",
+      "hp": 30,
+      "armorClass": 12,
+      "attackBonus": 3,
+      "saveBonus": 2,
+      "dexSaveBonus": 2,
+      "wisSaveBonus": 1,
+      "breakMaximum": 3.0,
+      "speed": 2.6,
+      "patterns": [
+        {
+          "id": "scout-shot",
+          "shape": "Cone",
+          "windup": 1.25,
+          "recovery": 2.4,
+          "size": 12,
+          "radius": 2.2,
+          "angle": 14,
+          "phaseThreshold": 1.0,
+          "damage": 6,
+          "dc": 12,
+          "savingThrow": false,
+          "parryable": true,
+          "targetPriority": "Backline"
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "hp": 150,
+      "armorClass": 14,
+      "attackBonus": 3,
+      "saveBonus": 2,
+      "dexSaveBonus": 2,
+      "wisSaveBonus": 1,
+      "breakMaximum": 5.0,
+      "speed": 2.0,
+      "patterns": [
+        {
+          "id": "elite-cone",
+          "shape": "Cone",
+          "windup": 1.2,
+          "recovery": 1.1,
+          "size": 4.0,
+          "radius": 2.2,
+          "angle": 65.0,
+          "phaseThreshold": 1.0,
+          "damage": 4,
+          "dc": 12,
+          "savingThrow": false,
+          "parryable": true
+        },
+        {
+          "id": "elite-circle",
+          "shape": "Circle",
+          "windup": 1.5,
+          "recovery": 1.5,
+          "size": 3.5,
+          "radius": 2.5,
+          "angle": 65.0,
+          "phaseThreshold": 1.0,
+          "damage": 4,
+          "dc": 12,
+          "savingThrow": true,
+          "parryable": false
+        }
+      ]
+    },
+    {
+      "id": "boss",
+      "hp": 230,
+      "armorClass": 14,
+      "attackBonus": 3,
+      "saveBonus": 2,
+      "dexSaveBonus": 2,
+      "wisSaveBonus": 1,
+      "breakMaximum": 7.0,
+      "speed": 1.8,
+      "patterns": [
+        {
+          "id": "boss-cone",
+          "shape": "Cone",
+          "windup": 1.3,
+          "recovery": 1.1,
+          "size": 4.5,
+          "radius": 2.2,
+          "angle": 70.0,
+          "phaseThreshold": 1.0,
+          "damage": 4,
+          "dc": 12,
+          "savingThrow": false,
+          "parryable": true
+        },
+        {
+          "id": "boss-ground",
+          "shape": "Circle",
+          "windup": 1.5,
+          "recovery": 1.4,
+          "size": 3.5,
+          "radius": 2.7,
+          "angle": 65.0,
+          "phaseThreshold": 1.0,
+          "damage": 4,
+          "dc": 12,
+          "savingThrow": true,
+          "parryable": false
+        },
+        {
+          "id": "boss-phase2",
+          "shape": "Cone",
+          "windup": 1.1,
+          "recovery": 1.1,
+          "size": 5.0,
+          "radius": 2.2,
+          "angle": 90.0,
+          "phaseThreshold": 0.5,
+          "damage": 5,
+          "dc": 12,
+          "savingThrow": false,
+          "parryable": true
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "hp": 30,
+      "armorClass": 10,
+      "attackBonus": 3,
+      "saveBonus": 2,
+      "dexSaveBonus": 2,
+      "wisSaveBonus": 1,
+      "breakMaximum": 2.0,
+      "speed": 0.0,
+      "patterns": [
+        {
+          "id": "mechanism-ground",
+          "shape": "Circle",
+          "windup": 1.7,
+          "recovery": 2.0,
+          "size": 3.5,
+          "radius": 2.0,
+          "angle": 65.0,
+          "phaseThreshold": 1.0,
+          "damage": 2,
+          "dc": 12,
+          "savingThrow": true,
+          "parryable": false
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "EVENT_A",
+      "roomId": "R2",
+      "ability": "Intelligence",
+      "worldEffect": "ROUTE_OPEN",
+      "x": 52.0,
+      "z": 2.0,
+      "range": 5.0,
+      "dc": 13,
+      "preparation": 0,
+      "advantage": false,
+      "disadvantage": false
+    },
+    {
+      "id": "EVENT_B",
+      "roomId": "R3",
+      "ability": "Wisdom",
+      "worldEffect": "BOSS_MECHANISM_DISABLED",
+      "x": 77.0,
+      "z": 5.0,
+      "range": 5.0,
+      "dc": 14,
+      "preparation": 0,
+      "advantage": false,
+      "disadvantage": false
+    }
+  ],
+  "rules": [
+    {
+      "id": "BASE",
+      "kind": "Law",
+      "description": "基准指挥规则",
+      "chargeCapDelta": 0,
+      "startChargeDelta": 0,
+      "aimMultiplier": 1.0,
+      "reactionMultiplier": 1.0,
+      "preparationRepeatMultiplier": 1.0
+    },
+    {
+      "id": "COMMAND",
+      "kind": "Law",
+      "description": "上限3，瞄准准备更慢",
+      "chargeCapDelta": 1,
+      "startChargeDelta": 0,
+      "aimMultiplier": 1.25,
+      "reactionMultiplier": 1.0,
+      "preparationRepeatMultiplier": 1.0
+    },
+    {
+      "id": "RESERVE",
+      "kind": "Relic",
+      "description": "职业准备重复间隔缩短至基准的5/6；不增加起战次数",
+      "chargeCapDelta": 0,
+      "startChargeDelta": 0,
+      "aimMultiplier": 1.0,
+      "reactionMultiplier": 1.0,
+      "preparationRepeatMultiplier": 0.8333333
+    },
+    {
+      "id": "FOCUS",
+      "kind": "Relic",
+      "description": "瞄准准备时间缩短",
+      "chargeCapDelta": 0,
+      "startChargeDelta": 0,
+      "aimMultiplier": 0.65,
+      "reactionMultiplier": 1.0,
+      "preparationRepeatMultiplier": 1.0
+    },
+    {
+      "id": "REACTION",
+      "kind": "Relic",
+      "description": "反应恢复时间缩短",
+      "chargeCapDelta": 0,
+      "startChargeDelta": 0,
+      "aimMultiplier": 1.0,
+      "reactionMultiplier": 0.7,
+      "preparationRepeatMultiplier": 1.0
+    }
+  ]
+}

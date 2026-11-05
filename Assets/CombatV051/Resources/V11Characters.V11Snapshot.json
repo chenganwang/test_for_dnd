@@ -1,0 +1,356 @@
+{
+  "version": "v11-catalog-1",
+  "demoAllowance": 6,
+  "characters": [
+    {
+      "id": "char_story_evan",
+      "displayName": "埃文",
+      "category": "Main",
+      "silhouetteId": "evan",
+      "role": 2,
+      "coreSupported": false,
+      "passiveId": "v11_evan_insight",
+      "weaponId": "mage-staff",
+      "actionIds": [
+        "ability_bind_radiance",
+        "v11_support_ward"
+      ]
+    },
+    {
+      "id": "char_story_mira",
+      "displayName": "米拉",
+      "category": "Main",
+      "silhouetteId": "mira",
+      "role": 0,
+      "coreSupported": false,
+      "passiveId": "v11_mira_vigor",
+      "weaponId": "fighter-sword-shield",
+      "actionIds": [
+        "shove",
+        "attack"
+      ]
+    },
+    {
+      "id": "char_story_finn",
+      "displayName": "菲恩",
+      "category": "Main",
+      "silhouetteId": "finn",
+      "role": 2,
+      "coreSupported": false,
+      "passiveId": "v11_finn_resolve",
+      "weaponId": "mage-staff",
+      "finnSustain": {
+        "maxHpFraction": 0.005,
+        "intervalSeconds": 0.5,
+        "targetActorId": null
+      },
+      "actionIds": [
+        "v11_nature_bind",
+        "v11_nature_mend"
+      ]
+    },
+    {
+      "id": "fighter",
+      "displayName": "战士",
+      "category": "Companion",
+      "silhouetteId": "fighter",
+      "role": 0,
+      "coreSupported": false,
+      "passiveId": "v11_fighter_guard",
+      "weaponId": "fighter-sword-shield",
+      "actionIds": [
+        "attack",
+        "shove"
+      ]
+    },
+    {
+      "id": "mage",
+      "displayName": "法师",
+      "category": "Companion",
+      "silhouetteId": "mage",
+      "role": 2,
+      "coreSupported": false,
+      "passiveId": "v11_mage_insight",
+      "weaponId": "mage-staff",
+      "actionIds": [
+        "ability_bind_radiance",
+        "control"
+      ]
+    },
+    {
+      "id": "rogue",
+      "displayName": "游荡者",
+      "category": "Companion",
+      "silhouetteId": "rogue",
+      "role": 1,
+      "coreSupported": false,
+      "passiveId": "v11_rogue_accuracy",
+      "weaponId": "rogue-blades",
+      "actionIds": [
+        "sneak",
+        "v11_quick_shot"
+      ]
+    },
+    {
+      "id": "char_demo_paladin",
+      "displayName": "圣武士",
+      "category": "Companion",
+      "silhouetteId": "paladin",
+      "role": 4,
+      "coreSupported": true,
+      "passiveId": "v11_paladin_vigor",
+      "weaponId": "weapon_demo_greatsword",
+      "actionIds": [
+        "ability_smite_recharge",
+        "v11_oath_aegis"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "char_story_evan/passive",
+      "characterId": "char_story_evan",
+      "displayName": "记录者",
+      "description": "智力+1；事件与法术DC使用实际智力。",
+      "kind": "Passive",
+      "abilityId": "v11_evan_insight",
+      "prerequisiteIds": [],
+      "cost": 1,
+      "initialUnlocked": false
+    },
+    {
+      "id": "char_story_evan/active1",
+      "characterId": "char_story_evan",
+      "displayName": "裂光记录",
+      "description": "复用裂光协同式：0.75秒施法，16秒冷却；敌WIS决定短控制，合法施放可靠附着8秒裂光。",
+      "kind": "Active",
+      "abilityId": "ability_bind_radiance",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "char_story_evan/active2",
+      "characterId": "char_story_evan",
+      "displayName": "支援结界",
+      "description": "1战术次数；INT+熟练对抗DC10，成功全队各3点吸收盾6有效模拟秒；同技能不叠加。",
+      "kind": "Active",
+      "abilityId": "v11_support_ward",
+      "prerequisiteIds": [
+        "char_story_evan/passive"
+      ],
+      "cost": 1,
+      "initialUnlocked": false
+    },
+    {
+      "id": "char_story_mira/passive",
+      "characterId": "char_story_mira",
+      "displayName": "活力",
+      "description": "最大生命+4；只在新局给予对应初始生命，续玩不补血。",
+      "kind": "Passive",
+      "abilityId": "v11_mira_vigor",
+      "prerequisiteIds": [],
+      "cost": 1,
+      "initialUnlocked": false
+    },
+    {
+      "id": "char_story_mira/active1",
+      "characterId": "char_story_mira",
+      "displayName": "推撞",
+      "description": "复用推撞检定与位置、稳定和撞击规则，消耗1战术次数。",
+      "kind": "Active",
+      "abilityId": "shove",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "char_story_mira/active2",
+      "characterId": "char_story_mira",
+      "displayName": "重斩",
+      "description": "1战术次数；攻击d20+攻击加值对抗AC，命中造成原精准攻击伤害。",
+      "kind": "Active",
+      "abilityId": "attack",
+      "prerequisiteIds": [
+        "char_story_mira/passive"
+      ],
+      "cost": 1,
+      "initialUnlocked": false
+    },
+    {
+      "id": "char_story_finn/passive",
+      "characterId": "char_story_finn",
+      "displayName": "自然感知",
+      "description": "感知与感知豁免+1；普攻实际扣除敌人生命时，每0.5有效模拟秒至多累积自身最大生命的0.5%微疗，累计满1HP才恢复。满血不储存，不复活。数值取本角色配置，新局生效。",
+      "kind": "Passive",
+      "abilityId": "v11_finn_resolve",
+      "prerequisiteIds": [],
+      "cost": 1,
+      "initialUnlocked": false
+    },
+    {
+      "id": "char_story_finn/active1",
+      "characterId": "char_story_finn",
+      "displayName": "缚根",
+      "description": "1战术次数，7米；敌WIS豁免失败短束缚普通1.2秒/精英0.6秒，Boss改为2秒减速。非麻痹，无自动暴击。",
+      "kind": "Active",
+      "abilityId": "v11_nature_bind",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "char_story_finn/active2",
+      "characterId": "char_story_finn",
+      "displayName": "林息回复",
+      "description": "1战术次数；WIS+熟练对抗DC10，成功每名存活队友回复4HP；不复活、不超生命上限。",
+      "kind": "Active",
+      "abilityId": "v11_nature_mend",
+      "prerequisiteIds": [
+        "char_story_finn/passive"
+      ],
+      "cost": 1,
+      "initialUnlocked": false
+    },
+    {
+      "id": "fighter/passive",
+      "characterId": "fighter",
+      "displayName": "护卫体魄",
+      "description": "护甲等级AC+1，只作用本角色。",
+      "kind": "Passive",
+      "abilityId": "v11_fighter_guard",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "fighter/active1",
+      "characterId": "fighter",
+      "displayName": "重斩",
+      "description": "1战术次数；攻击d20+攻击加值对抗AC，命中造成原精准攻击伤害。",
+      "kind": "Active",
+      "abilityId": "attack",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "fighter/active2",
+      "characterId": "fighter",
+      "displayName": "推撞",
+      "description": "复用推撞检定与位置、稳定和撞击规则，消耗1战术次数。",
+      "kind": "Active",
+      "abilityId": "shove",
+      "prerequisiteIds": [
+        "fighter/passive"
+      ],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "mage/passive",
+      "characterId": "mage",
+      "displayName": "法术洞察",
+      "description": "智力+1；裂光与相关智力法术检定DC实际增加。",
+      "kind": "Passive",
+      "abilityId": "v11_mage_insight",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "mage/active1",
+      "characterId": "mage",
+      "displayName": "定身术·裂光协同式",
+      "description": "0.75秒施法，16秒冷却；敌WIS决定短控制，合法施放可靠附着8秒裂光。无需战术次数/法术位。",
+      "kind": "Active",
+      "abilityId": "ability_bind_radiance",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "mage/active2",
+      "characterId": "mage",
+      "displayName": "雷鸣",
+      "description": "复用现有P5雷鸣：敌体质豁免、推开与失衡规则；花1战术次数及1法术位。",
+      "kind": "Active",
+      "abilityId": "control",
+      "prerequisiteIds": [
+        "mage/passive"
+      ],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "rogue/passive",
+      "characterId": "rogue",
+      "displayName": "敏锐",
+      "description": "攻击总加值+1，不改变原始骰面或自然20。",
+      "kind": "Passive",
+      "abilityId": "v11_rogue_accuracy",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "rogue/active1",
+      "characterId": "rogue",
+      "displayName": "突袭",
+      "description": "复用真实位置与机会的突袭规则，花1战术次数。",
+      "kind": "Active",
+      "abilityId": "sneak",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "rogue/active2",
+      "characterId": "rogue",
+      "displayName": "速射",
+      "description": "1战术次数，7米；攻击d20+攻击加值对抗AC，命中伤害6，自然20暴击伤害12。",
+      "kind": "Active",
+      "abilityId": "v11_quick_shot",
+      "prerequisiteIds": [
+        "rogue/passive"
+      ],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "char_demo_paladin/passive",
+      "characterId": "char_demo_paladin",
+      "displayName": "守誓体魄",
+      "description": "最大生命+4；只在新局给予对应初始生命，续玩不补血。",
+      "kind": "Passive",
+      "abilityId": "v11_paladin_vigor",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "char_demo_paladin/active1",
+      "characterId": "char_demo_paladin",
+      "displayName": "至圣斩",
+      "description": "原至圣斩：基础1战术次数；命中后可再花1次全力。同一检定与伤害提交，不新增圣能。",
+      "kind": "Active",
+      "abilityId": "ability_smite_recharge",
+      "prerequisiteIds": [],
+      "cost": 0,
+      "initialUnlocked": true
+    },
+    {
+      "id": "char_demo_paladin/active2",
+      "characterId": "char_demo_paladin",
+      "displayName": "圣誓护盾",
+      "description": "1战术次数；CHA+熟练对抗DC10，成功自身6点吸收盾6有效模拟秒；同技能不叠加。",
+      "kind": "Active",
+      "abilityId": "v11_oath_aegis",
+      "prerequisiteIds": [
+        "char_demo_paladin/passive"
+      ],
+      "cost": 0,
+      "initialUnlocked": true
+    }
+  ]
+}
